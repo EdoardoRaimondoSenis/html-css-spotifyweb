@@ -1,17 +1,31 @@
 * {
     font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 body {
     margin: 0;
 }
 
+.logonav {
+    display: none;
+}
+
+.logonavcell {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 /* VERSIONE COMPUTER */
 @media screen and (min-width: 769px) {
     .navigatore {
-        position: fixed;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         height: 100%;
         width: 300px;
         background-color: black;
@@ -21,7 +35,7 @@ body {
         display: flex;
         justify-content: center;
         width: calc(100% - 40px);
-        margin: 20px;
+        margin: 20px 20px 20px 0;
     }
 
     .logonav img {
@@ -32,30 +46,121 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
-        font-weight: bold;
     }
 
     .menu div {
         color: #5d5d5d;
-        padding: 20px;
     }
 
-    .menù div:hover {
+    .pmenù:hover {
         border-left-color: #8fd42c;
-        border-style: solid;
-        transition: 100ms;
+        border-left-style: solid;
+        transition: 200ms;
     }
 
-    .pmenù {
-
+    .pmenù div:hover {
+        filter: invert(100%) sepia(86%) saturate(30%) hue-rotate(292deg) brightness(84%) contrast(95%);
     }
 
-    .pmenù span {
+    .pmenù div {
+        display: flex;
+        align-items: center;
+        padding: 5px 0 5px 30px;
         color: #5d5d5d;
+    }
+
+    .pmenù a {
+        padding-left: 10px;
+        color: #5d5d5d;
+        text-decoration: none;
     }
 
     .logomenù {
         width: 30px;
+    }
+
+    #titleplaylist {
+        display: flex;
+        color: white;
+        margin: 20px 0 20px 30px;
+    }
+
+    .playlist div a {
+        color: #5d5d5d;
+        padding-left: 10px;
+    }
+
+    .linkplaylist:hover {
+        border-left-color: #8fd42c;
+        border-left-style: solid;
+        transition: 100ms;
+    }
+    
+    .playlist div a:hover {
+        color: #d0d0d0;
+    }
+
+    .linkplaylist {
+        display: flex;
+        align-items: center;
+        padding: 5px 0 5px 30px;
+        height: 30px;
+        margin: 10px 0 5px 0;
+    }
+
+    .plussign {
+        font-size: 35px;
+        padding: 0 10.6px 0 10.6px;
+        background-color: #d0d0d0;
+        margin-left: 12.9px;
+    }
+
+    .cred {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20%;
+    }
+
+    .cred hr {
+        width: calc(100% - 65px);
+    }
+
+    .credup {
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 30px;
+    }
+
+    .credup a {
+        color: #5d5d5d;
+    }
+
+    .credup img {
+        width: 15px;
+        padding-right: 10px;
+    }
+
+    .credup a:hover {
+        filter: invert(100%) sepia(86%) saturate(30%) hue-rotate(292deg) brightness(84%) contrast(95%);
+    }
+
+    .creddown {
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 30px;
+    }
+
+    .creddown a {
+        color: #d0d0d0;
+    }
+
+    .creddown img {
+        padding: 2px;
+        background-color: #5d5d5d;
+        border-radius: 50%;
+        width: 20px;
+        margin-right: 10px;
     }
 
 }
