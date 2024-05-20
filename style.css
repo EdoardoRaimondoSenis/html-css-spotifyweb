@@ -1,0 +1,73 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* VERSIONE COMPUTER */
+@media screen and (min-width: 769px) {
+    .navigatore {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 300px;
+        background-color: black;
+    }
+
+    .logonav {
+        display: flex;
+        justify-content: center;
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .logonav img {
+        width: 200px;
+    }
+
+    .menù {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .menu div {
+        color: #5d5d5d;
+        padding: 20px;
+    }
+
+    .menù div:hover {
+        border-left-color: #8fd42c;
+        border-style: solid;
+        transition: 100ms;
+    }
+
+    .pmenù {
+
+    }
+
+    .pmenù span {
+        color: #5d5d5d;
+    }
+
+    .logomenù {
+        width: 30px;
+    }
+
+}
+
+/* VERSIONE TABLET */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    
+}
+
+
+
+/* VERSIONE CELLULARE */
+@media screen and (max-width: 480px) {
+    
+}
