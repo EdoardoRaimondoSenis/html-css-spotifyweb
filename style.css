@@ -22,19 +22,27 @@ a {
 
 /* VERSIONE COMPUTER */
 @media screen and (min-width: 769px) {
+    .orizz {
+        height: 100%;
+        width: 250px;
+        position: fixed; 
+        z-index: 20;
+        top: 0; 
+        left: 0;
+        overflow-x: hidden;
+        background-color: black;
+    }
+    
     .navigatore {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
-        width: 300px;
-        background-color: black;
     }
 
     .logonav {
         display: flex;
         justify-content: center;
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
         margin: 20px 20px 20px 0;
     }
 
@@ -89,12 +97,6 @@ a {
         color: #5d5d5d;
         padding-left: 10px;
     }
-
-    .linkplaylist:hover {
-        border-left-color: #8fd42c;
-        border-left-style: solid;
-        transition: 100ms;
-    }
     
     .playlist div a:hover {
         color: #d0d0d0;
@@ -103,9 +105,14 @@ a {
     .linkplaylist {
         display: flex;
         align-items: center;
-        padding: 5px 0 5px 30px;
-        height: 30px;
+        padding: 5px 0 5px 20px;
         margin: 10px 0 5px 0;
+    }
+
+    .linkplaylist:hover {
+        border-left-color: #8fd42c;
+        border-left-style: solid;
+        transition: 100ms;
     }
 
     .plussign {
@@ -115,11 +122,18 @@ a {
         margin-left: 12.9px;
     }
 
+    .playlistscroll {
+        overflow-y: scroll;
+        width: 100%;
+        height: 300px;
+        z-index: 0;
+    }
+
     .cred {
         display: flex;
         flex-direction: column;
+        margin-top: 17%;
         width: 100%;
-        margin-top: 20%;
     }
 
     .cred hr {
@@ -161,6 +175,56 @@ a {
         border-radius: 50%;
         width: 20px;
         margin-right: 10px;
+    }
+
+    .upgrade {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        background-color: #080b12;
+    }
+
+    .upgrade a {
+        color: white;
+        border-color: white;
+        border-style: solid;
+        border-radius: 40px;
+        padding: 10px 30px;
+        margin-right: 10px;
+    }
+
+    .upgrade a:hover {
+        transform: scale(1.05);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 250px);
+        margin-left: 250px;
+        background-color: #141922;
+    }
+
+    .navmain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .linknavmain  a {
+        padding: 0 20px;
+        color: #6a6c71;
+        margin: 10px 0;
+    }
+
+    .linknavmain a:hover {
+        color: #d0d0d0;
+        border-bottom-color: #8fd42c;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
     }
 
 }
