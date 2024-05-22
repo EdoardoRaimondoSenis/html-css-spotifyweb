@@ -19,10 +19,28 @@ a {
     text-decoration: none;
 }
 
+.menù {
+    display: none;
+}
+
+.menùpicc {
+    display: none;
+}
+
+.titleplaylist {
+    display: none;
+}
+
+.playlist {
+    display: none;
+}
+
 
 /* VERSIONE COMPUTER */
 @media screen and (min-width: 769px) {
-    .orizz {
+    
+    /* nav scrollabile verticale */
+    .vertic {
         height: 100%;
         width: 250px;
         position: fixed; 
@@ -33,12 +51,13 @@ a {
         background-color: black;
     }
     
+    /* navigatore principale */
     .navigatore {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
+    /* logo spotify */
     .logonav {
         display: flex;
         justify-content: center;
@@ -46,30 +65,37 @@ a {
         margin: 20px 20px 20px 0;
     }
 
+    /* immagine spotify */
     .logonav img {
         width: 200px;
     }
 
+    /* menù principale (home, cerca, la tua libreria) */
     .menù {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
+
+    /* colore font */
     .menu div {
         color: #5d5d5d;
     }
 
+    /* bordo sinistra verde in hover */
     .pmenù:hover {
         border-left-color: #8fd42c;
         border-left-style: solid;
         transition: 200ms;
     }
 
+    /* colore immagine in hover */
     .pmenù div:hover {
         filter: invert(100%) sepia(86%) saturate(30%) hue-rotate(292deg) brightness(84%) contrast(95%);
     }
 
+    /* centramento immagine e testo */
     .pmenù div {
         display: flex;
         align-items: center;
@@ -77,32 +103,43 @@ a {
         color: #5d5d5d;
     }
 
+    /* centramento testo */
     .pmenù a {
         padding-left: 10px;
         color: #5d5d5d;
         text-decoration: none;
     }
 
+    /* grandezza immagini menù */
     .logomenù {
         width: 30px;
     }
 
-    #titleplaylist {
+    /* titolo sezione playlist */
+    .titleplaylist {
         display: flex;
         color: white;
         margin: 20px 0 20px 30px;
     }
 
+    /* annullamento display none */
+    .playlist {
+        display: block;
+    }
+
+    /* colore e sistemazione link playlist */
     .playlist div a {
         color: #5d5d5d;
         padding-left: 10px;
     }
     
+    /* colore link in hover */
     .playlist div a:hover {
         color: #d0d0d0;
         transition: 150ms;
     }
 
+    /* link playlist */
     .linkplaylist {
         display: flex;
         align-items: center;
@@ -110,6 +147,7 @@ a {
         margin: 10px 0 5px 0;
     }
 
+    /* segno + "crea playlist" */
     .plussign {
         font-size: 35px;
         padding: 0 10.6px 0 10.6px;
@@ -117,13 +155,14 @@ a {
         margin-left: 12.9px;
     }
 
+    /* nav scrollabile */
     .playlistscroll {
         overflow-y: scroll;
         width: 100%;
         height: 300px;
-        z-index: 0;
     }
 
+    /* tasto "effettua l'upgrade" */
     .upgrade {
         position: fixed;
         display: flex;
@@ -135,6 +174,7 @@ a {
         z-index: 19;
     }
 
+    /* link upgrade */
     .upgrade a {
         color: white;
         border-color: white;
@@ -144,10 +184,12 @@ a {
         margin-right: 10px;
     }
 
+    /* ingrandimento link upgrade in hover */
     .upgrade a:hover {
         transform: scale(1.05);
     }
 
+    /* organizzazione main */
     main {
         display: flex;
         flex-direction: column;
@@ -157,6 +199,7 @@ a {
         padding: 20px;
     }
 
+    /* navigatore del main */
     .navmain{
         display: flex;
         justify-content: center;
@@ -167,6 +210,7 @@ a {
         height: 30px;
     }
 
+    /* link navigatore main */
     .linknavmain {
         position: relative;
         display: flex;
@@ -174,16 +218,18 @@ a {
         width: calc(80% / 6);
     }
 
+    /* centramento link navigatore main */
     .linknavmain a {
         text-align: center;
         color: #6a6c71;
-        /* margin: 0 20px; */
     }
 
+    /* colore link in hover */
     .linknavmain a:hover {
         color: #d0d0d0;
     }
 
+    /* attributi bordo verde sotto i link */
     .borderbottom {
         position: absolute;
         bottom: -5px;
@@ -194,10 +240,12 @@ a {
         background-color: #8fd42c;
     }
 
+    /* borderbottom visibile in hover */
     .linknavmain a:hover + .borderbottom {
         display: block;
     }
 
+    /* titolo raccolta playlist */
     h2 {
         display: flex;
         color: white;
@@ -207,6 +255,7 @@ a {
         margin-bottom: 20px;    
     }
 
+    /* contenitore raccolta playlist */
     .mainplaylist {
         display: flex;
         flex-direction: row;
@@ -214,6 +263,7 @@ a {
         width: 100%;
     }
 
+    /* card singola playlist */
     .cardplaylist {
         display: flex;
         flex-direction: column;
@@ -222,6 +272,7 @@ a {
         height: 300px;
     }
 
+    /* contenitore immagine playlist */
     .contimgplaylist {
         position: relative;
         width: 200px;
@@ -229,10 +280,12 @@ a {
         cursor: pointer;
     }
 
+    /* ridimensionamento immagine playlist */
     .imgplaylist {
         width: 200px;
     }
 
+    /* tasto play playlist (visibile in hover) */
     .playbutton {
         position: absolute;
         display: none;
@@ -243,52 +296,63 @@ a {
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%);
     }
 
+    /* filtro immagine playlist in hover */
     .imgplaylist:hover {
         filter: brightness(0.5);
         transition: 200ms;
     }
 
+    /* filtro immagine playlist in hover (ultima sezione) */
     .playlistartisti:hover {
         filter: brightness(0.5);
         transition: 200ms;
     }
 
+    /* tasto play visibile in hover sulle immagini delle playlist */
     .contimgplaylist:hover > .playbutton {
         display: block;
         transition: 200ms;
     }
 
+    /* titolo e sottotitolo playlist */
     .pcardplaylist {
         text-align: center;
     }
 
+    /* colore e spazio titolo playlist */
     .pcardplaylist h3 {
         color: white;
         margin: 10px 0;
     }
 
+    /* colore sottotitolo playlist */
     .pcardplaylist span {
         color: #6a6c71;
     }
 
+    /* sottotitolo raccolta playlist */
     .spanhdue {
         color: #6a6c71;
     }
 
+    /* margine tra una raccolta playlist e l'altra */
     .margincard {
         margin-top: 40px;
     }
 
+    /* margine ultima raccolta playlist */
     .artisti {
         margin: 0;
         padding: 0 0 20px 0;
     }
 
+    /* immagine playlist ultima raccolta */
     .playlistartisti {
         width: 200px;
         clip-path: circle(50%);
     }
 
+    /* attributi parte profilo nav scrollabile di destra */
     .cred {
         position: fixed;
         bottom: 80px;
@@ -303,39 +367,47 @@ a {
         background-color: black;
     }
 
+    /* riga di separazione profilo e installa app */
     .cred hr {
         width: calc(100% - 65px);
     }
 
+    /* attributi installa app */
     .credup {
         display: flex;
         align-items: center;
         margin: 0 0 5px 30px;
     }
 
+    /* colore link installa app */
     .credup a {
         color: #5d5d5d;
     }
 
+    /* dimensione immagine scarica */
     .credup img {
         width: 15px;
         padding-right: 10px;
     }
 
+    /* colore chiaro link installa app in hover */
     .credup a:hover {
         filter: invert(100%) sepia(86%) saturate(30%) hue-rotate(292deg) brightness(84%) contrast(95%);
     }
 
+    /* attributi profilo */
     .creddown {
         display: flex;
         align-items: center;
         margin: 0 0 5px 30px;
     }
 
+    /* colore link profilo */
     .creddown a {
         color: #d0d0d0;
     }
 
+    /* immagine profilo */
     .creddown img {
         padding: 2px;
         background-color: #5d5d5d;
@@ -344,6 +416,7 @@ a {
         margin-right: 10px;
     }
 
+    /* footer player spotify */
     footer {
         position: fixed;
         bottom: 0;
@@ -354,12 +427,14 @@ a {
         z-index: 20;
     }
 
+    /* contenitore player */
     footer > div {
         display: flex;
         position: relative;
         width: 100%;
     }
 
+    /* contenitore immagine canzone */
     .imgplayer {
         display: flex;
         align-items: center;
@@ -367,27 +442,32 @@ a {
         margin: 0 20px;
     }
 
+    /* dimensione immagine canzone */
     .imgplayer > img {
         width: 50px;
     }
 
+    /* nome e album canzone */
     .namesong {
         display: flex;
         flex-direction: column;
         padding: 0 10px;
     }
 
+    /* nome canzone (parte sopra) */
     .namesong h4 {
         margin: 5px 0;
         color: white;
         font-size: 15px;
     }
 
+    /* album canzone (parte sotto) */
     .namesong span {
         color: #6a6c71;
         font-size: 10px;
     }
 
+    /* cuore */
     .heart {
         width: 20px;
         margin-left: 50px;
@@ -395,17 +475,20 @@ a {
         filter: invert(37%) sepia(2%) saturate(10%) hue-rotate(326deg) brightness(101%) contrast(88%);
     }
 
+    /* ridimensionamento cuore e cartella in hover */
     .heart:hover, .folder:hover {
         transform: scale(1.1);
         filter: invert(82%) sepia(36%) saturate(0%) hue-rotate(140deg) brightness(93%) contrast(95%);
         cursor: pointer;
     }
 
+    /* cartella */
     .folder {
         width: 18px;
         filter: invert(37%) sepia(2%) saturate(10%) hue-rotate(326deg) brightness(101%) contrast(88%);
     }
 
+    /* player canzone */
     .player {
         display: flex;
         flex-direction: column;
@@ -414,6 +497,7 @@ a {
         margin-left: 12%;
     }
 
+    /* contenitore pulsanti del player */
     .pulsantiplayer {
         display: flex;
         justify-content: center;
@@ -421,17 +505,20 @@ a {
         height: 50px;
     }
 
+    /* dimensione pulsanti del player */
     .pulsantiplayer img {
         padding: 10px;
         width: 20px;
         filter: invert(94%) sepia(3%) saturate(21%) hue-rotate(103deg) brightness(108%) contrast(100%);
     }
 
+    /* ridimensionamento pulsanti player in hover */
     .pulsantiplayer img:hover {
         transform: scale(1.2);
         cursor: pointer;
     }
 
+    /* parte barra durata della canzone */
     .duratasong {
         display: flex;
         align-items: center;
@@ -439,10 +526,12 @@ a {
         height: 30px;
     }
 
+    /* colore tempo canzone */
     .duratasong span {
         color: #d0d0d0;
     }
 
+    /* barra tempo della canzone */
     .barsong {
         width: 500px;
         height: 5px;
@@ -451,6 +540,7 @@ a {
         margin: 0 30px;
     }
 
+    /* tempo trascorso della canzone */
     .song {
         position: relative;
         width: 140px;
@@ -459,11 +549,12 @@ a {
         background-color: #d0d0d0;
     }
 
+    /* colore tempo trascorso in hover */
     .song:hover {
         background-color: #8fd42c;
     }
 
-    /*  */
+    /* cerchietto tempo trascorso */
     .cerchiettosong {
         display: none;
         position: absolute;
@@ -475,10 +566,12 @@ a {
         border-radius: 50%;
     }
 
+    /* cerchietto visibile in hover */
     .song:hover > .cerchiettosong {
         display: block;
     }
 
+    /* contenitore parte destra del player */
     .volplayer {
         display: flex;
         align-items: center;
@@ -488,16 +581,19 @@ a {
 
     }
 
+    /* dimensione immaginine contenitore parte destra del player */
     .volplayer img {
         width: 15px;
         filter: invert(94%) sepia(3%) saturate(21%) hue-rotate(103deg) brightness(108%) contrast(100%);
         padding: 0 10px;
     }
 
+    /* ridimensionamento immaginine in hover */
     .volplayer div img:hover {
         transform: scale(1.2);
     }
 
+    /* barra quantità di volume */
     .barvol {
         width: 120px;
         height: 5px;
@@ -506,6 +602,7 @@ a {
         margin: 0 10px;
     }
 
+    /* barra volume effettivo */
     .vol {
         position: relative;
         width: 40px;
@@ -514,10 +611,12 @@ a {
         background-color: #d0d0d0;
     }
 
+    /* colore volume effettivo in hover */
     .vol:hover {
         background-color: #8fd42c;
     }
 
+    /* cerchietto volume effettivo */
     .cerchiettovol {
         display: none;
         position: absolute;
@@ -529,6 +628,7 @@ a {
         border-radius: 50%;
     }
 
+    /* cerchietto volume effettivo visibile in hover */
     .vol:hover > .cerchiettovol {
         display: block;
     }
