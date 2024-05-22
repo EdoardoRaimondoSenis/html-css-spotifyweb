@@ -161,26 +161,41 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         margin-top: 80px;
         width: 100%;
         height: 30px;
     }
 
     .linknavmain {
+        position: relative;
         display: flex;
         flex-direction: column;
+        width: calc(80% / 6);
     }
 
     .linknavmain a {
+        text-align: center;
         color: #6a6c71;
-        margin: 0 20px;
+        /* margin: 0 20px; */
     }
 
     .linknavmain a:hover {
         color: #d0d0d0;
-        border-bottom-color: #8fd42c;
-        border-bottom-style: solid;
-        transition: 150ms;
+    }
+
+    .borderbottom {
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 20px);
+        display: none;
+        width: 40px;
+        height: 3px;
+        background-color: #8fd42c;
+    }
+
+    .linknavmain a:hover + .borderbottom {
+        display: block;
     }
 
     h2 {
@@ -448,6 +463,7 @@ a {
         background-color: #8fd42c;
     }
 
+    /*  */
     .cerchiettosong {
         display: none;
         position: absolute;
