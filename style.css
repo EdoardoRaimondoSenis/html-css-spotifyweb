@@ -100,6 +100,7 @@ a {
     
     .playlist div a:hover {
         color: #d0d0d0;
+        transition: 150ms;
     }
 
     .linkplaylist {
@@ -107,12 +108,6 @@ a {
         align-items: center;
         padding: 5px 0 5px 20px;
         margin: 10px 0 5px 0;
-    }
-
-    .linkplaylist:hover {
-        border-left-color: #8fd42c;
-        border-left-style: solid;
-        transition: 100ms;
     }
 
     .plussign {
@@ -127,54 +122,6 @@ a {
         width: 100%;
         height: 300px;
         z-index: 0;
-    }
-
-    .cred {
-        display: flex;
-        flex-direction: column;
-        margin-top: 17%;
-        width: 100%;
-    }
-
-    .cred hr {
-        width: calc(100% - 65px);
-    }
-
-    .credup {
-        display: flex;
-        align-items: center;
-        margin: 0 0 5px 30px;
-    }
-
-    .credup a {
-        color: #5d5d5d;
-    }
-
-    .credup img {
-        width: 15px;
-        padding-right: 10px;
-    }
-
-    .credup a:hover {
-        filter: invert(100%) sepia(86%) saturate(30%) hue-rotate(292deg) brightness(84%) contrast(95%);
-    }
-
-    .creddown {
-        display: flex;
-        align-items: center;
-        margin: 0 0 5px 30px;
-    }
-
-    .creddown a {
-        color: #d0d0d0;
-    }
-
-    .creddown img {
-        padding: 2px;
-        background-color: #5d5d5d;
-        border-radius: 50%;
-        width: 20px;
-        margin-right: 10px;
     }
 
     .upgrade {
@@ -327,6 +274,248 @@ a {
         clip-path: circle(50%);
     }
 
+    .cred {
+        position: fixed;
+        bottom: 80px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        width: 250px;
+        height: 70px;
+        z-index: 20;
+        background-color: black;
+    }
+
+    .cred hr {
+        width: calc(100% - 65px);
+    }
+
+    .credup {
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 30px;
+    }
+
+    .credup a {
+        color: #5d5d5d;
+    }
+
+    .credup img {
+        width: 15px;
+        padding-right: 10px;
+    }
+
+    .credup a:hover {
+        filter: invert(100%) sepia(86%) saturate(30%) hue-rotate(292deg) brightness(84%) contrast(95%);
+    }
+
+    .creddown {
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 30px;
+    }
+
+    .creddown a {
+        color: #d0d0d0;
+    }
+
+    .creddown img {
+        padding: 2px;
+        background-color: #5d5d5d;
+        border-radius: 50%;
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        background-color: #282828;
+        width: 100%;
+        height: 80px;
+        z-index: 20;
+    }
+
+    footer > div {
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+
+    .imgplayer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 20px;
+    }
+
+    .imgplayer > img {
+        width: 50px;
+    }
+
+    .namesong {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .namesong h4 {
+        margin: 5px 0;
+        color: white;
+        font-size: 15px;
+    }
+
+    .namesong span {
+        color: #6a6c71;
+        font-size: 10px;
+    }
+
+    .heart {
+        width: 20px;
+        margin-left: 50px;
+        padding-right: 10px;
+        filter: invert(37%) sepia(2%) saturate(10%) hue-rotate(326deg) brightness(101%) contrast(88%);
+    }
+
+    .heart:hover, .folder:hover {
+        transform: scale(1.1);
+        filter: invert(82%) sepia(36%) saturate(0%) hue-rotate(140deg) brightness(93%) contrast(95%);
+        cursor: pointer;
+    }
+
+    .folder {
+        width: 18px;
+        filter: invert(37%) sepia(2%) saturate(10%) hue-rotate(326deg) brightness(101%) contrast(88%);
+    }
+
+    .player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 12%;
+    }
+
+    .pulsantiplayer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+    }
+
+    .pulsantiplayer img {
+        padding: 10px;
+        width: 20px;
+        filter: invert(94%) sepia(3%) saturate(21%) hue-rotate(103deg) brightness(108%) contrast(100%);
+    }
+
+    .pulsantiplayer img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    .duratasong {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+    }
+
+    .duratasong span {
+        color: #d0d0d0;
+    }
+
+    .barsong {
+        width: 500px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #6a6c71;
+        margin: 0 30px;
+    }
+
+    .song {
+        position: relative;
+        width: 140px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #d0d0d0;
+    }
+
+    .song:hover {
+        background-color: #8fd42c;
+    }
+
+    .cerchiettosong {
+        display: none;
+        position: absolute;
+        right: -2.5px;
+        bottom: -2.5px;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .song:hover > .cerchiettosong {
+        display: block;
+    }
+
+    .volplayer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: calc(25% + 11px);
+
+    }
+
+    .volplayer img {
+        width: 15px;
+        filter: invert(94%) sepia(3%) saturate(21%) hue-rotate(103deg) brightness(108%) contrast(100%);
+        padding: 0 10px;
+    }
+
+    .volplayer div img:hover {
+        transform: scale(1.2);
+    }
+
+    .barvol {
+        width: 120px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #6a6c71;
+        margin: 0 10px;
+    }
+
+    .vol {
+        position: relative;
+        width: 40px;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #d0d0d0;
+    }
+
+    .vol:hover {
+        background-color: #8fd42c;
+    }
+
+    .cerchiettovol {
+        display: none;
+        position: absolute;
+        right: -2.5px;
+        bottom: -2.5px;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .vol:hover > .cerchiettovol {
+        display: block;
+    }
 }
 
 /* VERSIONE TABLET */
