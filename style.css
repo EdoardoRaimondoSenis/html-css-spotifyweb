@@ -178,12 +178,14 @@ a {
     }
 
     .upgrade {
+        position: fixed;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         width: 100%;
         height: 80px;
         background-color: #080b12;
+        z-index: 19;
     }
 
     .upgrade a {
@@ -202,29 +204,127 @@ a {
     main {
         display: flex;
         flex-direction: column;
-        width: calc(100% - 250px);
+        width: calc(100% - 290px);
         margin-left: 250px;
         background-color: #141922;
+        padding: 20px;
     }
 
     .navmain{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 10px;
+        margin-top: 80px;
+        width: 100%;
+        height: 30px;
     }
 
-    .linknavmain  a {
-        padding: 0 20px;
+    .linknavmain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .linknavmain a {
         color: #6a6c71;
-        margin: 10px 0;
+        margin: 0 20px;
     }
 
     .linknavmain a:hover {
         color: #d0d0d0;
         border-bottom-color: #8fd42c;
         border-bottom-style: solid;
-        border-bottom-width: 3px;
+        transition: 150ms;
+    }
+
+    h2 {
+        display: flex;
+        color: white;
+        font-size: 40px;
+        width: 100%;
+        padding-top: 30px;
+        margin-bottom: 20px;    
+    }
+
+    .mainplaylist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .cardplaylist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% / 6);
+        height: 300px;
+    }
+
+    .contimgplaylist {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+    }
+
+    .imgplaylist {
+        width: 200px;
+    }
+
+    .playbutton {
+        position: absolute;
+        display: none;
+        left: 90px;
+        top: 85px;
+        width: 30px;
+        z-index: 1;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%);
+    }
+
+    .imgplaylist:hover {
+        filter: brightness(0.5);
+        transition: 200ms;
+    }
+
+    .playlistartisti:hover {
+        filter: brightness(0.5);
+        transition: 200ms;
+    }
+
+    .contimgplaylist:hover > .playbutton {
+        display: block;
+        transition: 200ms;
+    }
+
+    .pcardplaylist {
+        text-align: center;
+    }
+
+    .pcardplaylist h3 {
+        color: white;
+        margin: 10px 0;
+    }
+
+    .pcardplaylist span {
+        color: #6a6c71;
+    }
+
+    .spanhdue {
+        color: #6a6c71;
+    }
+
+    .margincard {
+        margin-top: 40px;
+    }
+
+    .artisti {
+        margin: 0;
+        padding: 0 0 20px 0;
+    }
+
+    .playlistartisti {
+        width: 200px;
+        clip-path: circle(50%);
     }
 
 }
