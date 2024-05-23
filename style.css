@@ -35,6 +35,10 @@ a {
     display: none;
 }
 
+.credmini {
+    display: none;
+}
+
 
 /* VERSIONE COMPUTER */
 @media screen and (min-width: 769px) {
@@ -1565,7 +1569,7 @@ a {
     }
 
     /* attributi parte profilo nav scrollabile di destra */
-    .cred {
+    .credmini {
         position: fixed;
         bottom: 100px;
         left: 0;
